@@ -2,10 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
 
-Angular CLI: 16.2.12
-Node: 18.14.0
-Package Manager: npm 9.6.2
-OS: win32 x64
+-Angular CLI: 16.2.12
+-Node: 18.14.0
+-Package Manager: npm 9.6.2
+-OS: win32 x64
 
 ## Development server
 
