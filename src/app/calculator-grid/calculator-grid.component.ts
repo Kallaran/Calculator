@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CalculatorGridComponent {
   result = '_';
+
+  displayNumber(event: number) {
+    if (this.result === '_') {
+      this.result = event.toString();
+    } else {
+      this.result += event.toString();
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-calculator-operator',
@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class CalculatorOperatorComponent {
   @Input() operator = '+';
+
+  @Output() selectedOperator = new EventEmitter<string>();
+
+  click() {
+    this.selectedOperator.emit(this.operator);
+  }
 }
