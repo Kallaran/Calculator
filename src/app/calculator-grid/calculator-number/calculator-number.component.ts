@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-calculator-number',
@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class CalculatorNumberComponent {
   @Input() number = 0;
+
+  @Output() selectedNumber = new EventEmitter<number>();
+
+  click() {
+    this.selectedNumber.emit(this.number);
+  }
 }
