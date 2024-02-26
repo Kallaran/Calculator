@@ -8,11 +8,40 @@ import { Component } from '@angular/core';
 export class CalculatorGridComponent {
   result = '_';
 
-  displayNumber(event: number) {
-    if (this.result === '_') {
-      this.result = event.toString();
+  firstPart = 0;
+  selectedOperator = '';
+
+  displayNumber($event: number) {
+    const number = $event.toString();
+    if (Number.isNaN(+this.result)) {
+      this.result = number;
     } else {
-      this.result += event.toString();
+      this.result += number;
     }
+  }
+
+  changeOperator($event: string) {
+    this.selectedOperator = $event;
+    this.firstPart = +this.result;
+    this.result = $event;
+  }
+
+  calculate() {
+    let result = 0;
+    switch (this.selectedOperator) {
+      case '+': {
+        result = this.firstPart + +this.result;
+        break;
+      }
+      case '-': {
+        //statements;
+        break;
+      }
+      default: {
+        //statements;
+        break;
+      }
+    }
+    this.result = result.toString();
   }
 }

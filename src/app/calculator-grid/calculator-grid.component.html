@@ -15,7 +15,10 @@
     ></app-calculator-number>
   </div>
   <div class="col-4">
-    <app-calculator-operator [operator]="'+'"></app-calculator-operator>
+    <app-calculator-operator
+      [operator]="'+'"
+      (selectedOperator)="changeOperator($event)"
+    ></app-calculator-operator>
   </div>
   <div class="col-4">
     <app-calculator-number
