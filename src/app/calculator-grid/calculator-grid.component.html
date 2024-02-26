@@ -1,17 +1,17 @@
 <div class="grid">
   <div class="col-12">
-    <div class="text-center p-3 border-round-sm surface-200 font-bold">9</div>
+    <app-calculator-result [result]="result"></app-calculator-result>
   </div>
-  <div class="col-6">
-    <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+  <div class="col-4">
+    <app-calculator-number [number]="1"></app-calculator-number>
   </div>
-  <div class="col-6">
-    <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+  <div class="col-4">
+    <app-calculator-number [number]="2"></app-calculator-number>
   </div>
-  <div class="col-6">
-    <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+  <div class="col-4">
+    <app-calculator-operator [operator]="'+'"></app-calculator-operator>
   </div>
-  <div class="col-6">
-    <div class="text-center p-3 border-round-sm bg-primary font-bold">4</div>
+  <div class="col-4">
+    <app-calculator-number [number]="3"></app-calculator-number>
   </div>
 </div>
